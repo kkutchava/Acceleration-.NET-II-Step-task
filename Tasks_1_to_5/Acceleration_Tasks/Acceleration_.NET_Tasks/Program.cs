@@ -8,7 +8,51 @@ namespace Acceleration_.NET_Tasks
         
         static void Main(string[] args)
         {
-            //
+            //testing
+
+            //task #1
+            Console.WriteLine("**Testing function isPalindrome**");
+            string str1 = "ABBA";
+            string str2 = "550555"; 
+            Console.WriteLine($"The string {str1} is palindrome: {isPalindrome(str1)}");
+            Console.WriteLine($"The string {str2} is palindrome: {isPalindrome(str2)}");
+
+            Console.WriteLine();
+
+            //task #2
+            Console.WriteLine("**Testing function MinSplit**");
+            int i76 = 76; //expect to return 4 (50, 20, 5, 1)
+            int i88 = 88; //expect to return 7 (50, 20, 10, 5, 1, 1, 1)
+            Console.WriteLine($"The min number of coins for {i76} cents are {MinSplit(i76)}");
+            Console.WriteLine($"The min number of coins for {i88} cents are {MinSplit(i88)}");
+
+            Console.WriteLine();
+
+            //task #3
+            Console.WriteLine("**Testing function NotContains**");
+            int[] arr1 = {-7, 0, 3, 4, 10}; //expect return 1
+            int[] arr2 = { -1, 1, 2, 3, 4, 5, 6, 7 ,8, 9, 10 }; //expect return 11
+            Console.WriteLine($"Minimal positive integer that is not in the array1 is {NotContains(arr1)}");
+            Console.WriteLine($"Minimal positive integer that is not in the array2 is {NotContains(arr2)}");
+
+            Console.WriteLine();
+
+            //task #4
+            Console.WriteLine("**Testing function IsProperly**");
+            string str3 = "(()()))"; //expect false
+            string str4 = "((()(())))"; //expect true
+            Console.WriteLine($"The parentheses in the string {str3} are set correctly: {IsProperly(str3)}");
+            Console.WriteLine($"The parentheses in the string {str4} are set correctly: {IsProperly(str4)}");
+
+            Console.WriteLine();
+
+            //task #5
+            Console.WriteLine("**Testing function CountVariants**");
+            int n1 = 10;
+            int n2 = 5;
+            Console.WriteLine($"For {n1} stairs there are {CountVariants(n1)} variants to go upstairs");
+            Console.WriteLine($"For {n2} stairs there are {CountVariants(n2)} variants to go upstairs");
+
         }
 
         //Below are implementations of first five problems
@@ -44,6 +88,7 @@ namespace Acceleration_.NET_Tasks
         }
 
         //**** TASK #2 ****
+        
         static int MinSplit(int amount)
         {
             int minCount = 0;
@@ -62,10 +107,15 @@ namespace Acceleration_.NET_Tasks
                     minCount++;
                 }
             }
+            return minCount;
+        }
 
 
-            //2nd way
-            /*
+        //2nd way
+        /*
+        static int MinSplit(int amount)
+        {
+            int minCount = 0;
             while (amount != 0)
             {
                 if (amount - 50 >= 0)
@@ -99,11 +149,14 @@ namespace Acceleration_.NET_Tasks
                     continue;
                 }
             }
-            */
+            
 
 
             return minCount;
         }
+        */
+
+
 
         //**** TASK #3 ****
         static int NotContains(int[] array)
