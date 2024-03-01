@@ -12,6 +12,7 @@ This repository contains the technical assignment for the Acceleration / .NET II
 6. Task 6: SQL
 7. Task 7: Entity Framework
 8. Task 8: REST API and FileWriter
+9. Task 9: SemaphoreSlim
 
 All tasks, except for Task 6, are implemented in C# and utilize the .NET 6 framework. The code for each task is thoroughly documented to ensure clarity and understanding.
 
